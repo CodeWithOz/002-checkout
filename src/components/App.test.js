@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import App from './App';
+import Slider from './Slider';
 
 function setup() {
   const props = {};
@@ -10,8 +11,8 @@ function setup() {
 }
 
 describe('App renders', () => {
-  test('anything', () => {
+  test('a Slider', () => {
     const { wrapper } = setup();
-    expect(wrapper.exists()).toEqual(true);
+    expect(wrapper.find(Slider).length).toEqual(1);
   });
 });
