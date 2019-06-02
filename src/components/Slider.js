@@ -4,7 +4,7 @@ import { Field, reduxForm } from 'redux-form';
 export function Slider() {
   return (
     <form>
-      <Field />
+      <Field name="test" component={() => <div>Test</div>} />
     </form>
   );
 }
