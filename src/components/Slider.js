@@ -1,9 +1,11 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
+import SliderRange from './formFields/SliderRange';
 
 const sliderConfig = {
   field: {
-    name: 'range'
+    name: 'range',
+    component: SliderRange
   }
 };
 
@@ -12,7 +14,7 @@ export function Slider() {
 
   return (
     <form>
-      <Field {...field} component={() => <div>Test</div>} />
+      <Field {...field} />
     </form>
   );
 }
