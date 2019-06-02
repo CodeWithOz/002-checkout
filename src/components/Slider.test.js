@@ -9,8 +9,11 @@ describe('Slider renders', () => {
     expect(shallowWrapper.find('form').length).toEqual(1);
   });
 
-  test('a Field', () => {
-    const { shallowWrapper } = setup(Slider, props);
-    expect(shallowWrapper.find(Field).length).toEqual(1);
+  describe('a Field with', () => {
+    test(`name of 'range'`, () => {
+      const { shallowWrapper } = setup(Slider, props);
+      expect(shallowWrapper.find({ name: 'range' }).length).toEqual(1);
+      expect(shallowWrapper.find({ name: 'range' }).is(Field)).toEqual(true);
+    });
   });
 });
