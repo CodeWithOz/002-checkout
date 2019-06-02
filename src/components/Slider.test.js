@@ -24,10 +24,10 @@ describe('Slider renders', () => {
       );
     });
 
-    test(`type set to 'input'`, () => {
+    test(`type set to 'range'`, () => {
       const { shallowWrapper } = setup(Slider, props);
       expect(shallowWrapper.find({ name: 'range' }).prop('type')).toEqual(
-        'input'
+        'range'
       );
     });
   });
