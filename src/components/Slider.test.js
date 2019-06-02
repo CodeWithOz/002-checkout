@@ -23,5 +23,12 @@ describe('Slider renders', () => {
         SliderRange
       );
     });
+
+    test(`type set to 'input'`, () => {
+      const { shallowWrapper } = setup(Slider, props);
+      expect(shallowWrapper.find({ name: 'range' }).prop('type')).toEqual(
+        'input'
+      );
+    });
   });
 });
