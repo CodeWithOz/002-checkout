@@ -1,10 +1,14 @@
 import React from 'react';
-import { Field } from 'redux-form';
+import { Field, reduxForm } from 'redux-form';
 
-export default function Slider() {
+export function Slider() {
   return (
     <form>
       <Field />
     </form>
   );
 }
+
+export default reduxForm({
+  form: 'Slider'
+})(Slider);

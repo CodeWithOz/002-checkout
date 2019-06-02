@@ -1,5 +1,5 @@
 import { Field } from 'redux-form';
-import Slider from './Slider';
+import { Slider } from './Slider';
 
 const props = {};
 
