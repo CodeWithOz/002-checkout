@@ -6,7 +6,7 @@ const sliderConfig = {
   field: {
     component: SliderRange,
     name: 'range',
-    type: 'input'
+    type: 'range'
   }
 };
 
