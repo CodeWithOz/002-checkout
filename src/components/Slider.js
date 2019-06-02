@@ -4,8 +4,9 @@ import SliderRange from './formFields/SliderRange';
 
 const sliderConfig = {
   field: {
+    component: SliderRange,
     name: 'range',
-    component: SliderRange
+    type: 'input'
   }
 };
 
