@@ -10,7 +10,7 @@ describe('Slider renders', () => {
     expect(shallowWrapper.find('form').length).toEqual(1);
   });
 
-  describe('a Field with', () => {
+  describe('a slider Field with', () => {
     test(`name set to 'range'`, () => {
       const { shallowWrapper } = setup(Slider, props);
       expect(shallowWrapper.find({ name: 'range' }).length).toEqual(1);
@@ -19,9 +19,8 @@ describe('Slider renders', () => {
 
     test('component set to SliderRange', () => {
       const { shallowWrapper } = setup(Slider, props);
-      expect(shallowWrapper.find({ component: SliderRange }).length).toEqual(1);
-      expect(shallowWrapper.find({ component: SliderRange }).is(Field)).toEqual(
-        true
+      expect(shallowWrapper.find({ name: 'range' }).prop('component')).toEqual(
+        SliderRange
       );
     });
   });
