@@ -1,11 +1,11 @@
 import React from 'react';
 import Slider from './Slider';
-import ProductDisplay from './ProductDisplay';
+import BgImgContainer from './BgImgContainer';
 
 export default function App() {
   return (
     <div>
-      <ProductDisplay />
+      <BgImgContainer />
       <Slider />
     </div>
   );
