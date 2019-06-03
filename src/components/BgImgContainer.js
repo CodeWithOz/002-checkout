@@ -1,5 +1,5 @@
 import React from 'react';
 
-export default function BgImgContainer() {
-  return <div>BgImgContainer</div>;
+export default function BgImgContainer({ children }) {
+  return <div>{children}</div>;
 }
