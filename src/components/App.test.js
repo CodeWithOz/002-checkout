@@ -1,6 +1,6 @@
 import App from './App';
 import Slider from './Slider';
-import ProductDisplay from './ProductDisplay';
+import BgImgContainer from './BgImgContainer';
 
 const props = {};
 
@@ -10,8 +10,8 @@ describe('App renders', () => {
     expect(shallowWrapper.find(Slider).length).toEqual(1);
   });
 
-  test('a ProductDisplay', () => {
+  test('a BgImgContainer', () => {
     const { shallowWrapper } = setup(App, props);
-    expect(shallowWrapper.find(ProductDisplay).length).toEqual(1);
+    expect(shallowWrapper.find(BgImgContainer).length).toEqual(1);
   });
 });
