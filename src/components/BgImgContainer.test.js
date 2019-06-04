@@ -20,7 +20,7 @@ describe('BgImgContainer renders', () => {
 describe('BgImgContainer correctly passes', () => {
   test(`'bgImgUrl' prop to its div as a background image`, () => {
     const { shallowWrapper } = setup(BgImgContainer, props);
-    expect(shallowWrapper.find('div').prop('style').backgroundImage).toEqual(
+    expect(shallowWrapper.find('div').prop('style').backgroundImage).toContain(
       props.bgImgUrl
     );
   });
