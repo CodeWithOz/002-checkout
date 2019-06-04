@@ -1,6 +1,6 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
-import SliderRange from './formFields/SliderRange';
+import { SliderRange } from '../../components';
 
 const sliderConfig = {
   field: {

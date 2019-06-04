@@ -1,6 +1,5 @@
 import App from './App';
-import Slider from './Slider';
-import BgImgContainer from './BgImgContainer';
+import { BgImgContainer, Slider } from '../../components';
 
 const props = {};
 

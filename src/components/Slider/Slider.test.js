@@ -1,6 +1,6 @@
 import { Field } from 'redux-form';
 import { Slider } from './Slider';
-import SliderRange from './formFields/SliderRange';
+import { SliderRange } from '../../components';
 
 const props = {};
 

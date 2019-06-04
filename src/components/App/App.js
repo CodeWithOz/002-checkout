@@ -1,6 +1,5 @@
 import React from 'react';
-import Slider from './Slider';
-import BgImgContainer from './BgImgContainer';
+import { BgImgContainer, Slider } from '../../components';
 
 const appConfig = {
   bgImgUrl: 'https://source.unsplash.com/900x900/?office'
