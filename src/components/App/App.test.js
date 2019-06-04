@@ -1,5 +1,5 @@
 import App from './App';
-import { BgImgContainer, Slider } from '../../components';
+import { BgImgContainer, ProductDisplay, Slider } from '../../components';
 
 const props = {};
 
@@ -24,5 +24,12 @@ describe('App correctly passes', () => {
     expect(
       shallowWrapper.find(BgImgContainer).prop('bgImgUrl').length
     ).toBeGreaterThan(0);
+  });
+
+  test('a ProductDisplay as the a of the BgImgContainer', () => {
+    const { shallowWrapper } = setup(App, props);
+    expect(
+      shallowWrapper.find(BgImgContainer).find(ProductDisplay).length
+    ).toEqual(1);
   });
 });
