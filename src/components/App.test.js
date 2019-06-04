@@ -15,3 +15,15 @@ describe('App renders', () => {
     expect(shallowWrapper.find(BgImgContainer).length).toEqual(1);
   });
 });
+
+describe('App correctly passes', () => {
+  test(`a 'bgImgUrl' prop to BgImgContainer`, () => {
+    const { shallowWrapper } = setup(App, props);
+    expect(shallowWrapper.find(BgImgContainer).prop('bgImgUrl')).toEqual(
+      expect.any(String)
+    );
+    expect(
+      shallowWrapper.find(BgImgContainer).prop('bgImgUrl').length
+    ).toBeGreaterThan(0);
+  });
+});
