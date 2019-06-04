@@ -1,7 +1,8 @@
 import BgImgContainer from './BgImgContainer';
 
 const props = {
-  children: 'test'
+  children: 'test',
+  bgImgUrl: 'test'
 };
 
 describe('BgImgContainer renders', () => {
@@ -13,5 +14,14 @@ describe('BgImgContainer renders', () => {
   test(`its 'children' prop`, () => {
     const { shallowWrapper } = setup(BgImgContainer, props);
     expect(shallowWrapper.text()).toContain(props.children);
+  });
+});
+
+describe('BgImgContainer correctly passes', () => {
+  test(`'bgImgUrl' prop to its div as a background image`, () => {
+    const { shallowWrapper } = setup(BgImgContainer, props);
+    expect(shallowWrapper.find('div').prop('style').backgroundImage).toEqual(
+      props.bgImgUrl
+    );
   });
 });
