@@ -10,13 +10,6 @@ describe('Slider renders', () => {
     expect(shallowWrapper.find('form').length).toEqual(1);
   });
 
-  test('a form with the initial slider value set to 50', () => {
-    const { shallowWrapper } = setup(Slider, props);
-    expect(shallowWrapper.find('form').prop('initialValues')).toEqual({
-      range: '50'
-    });
-  });
-
   describe('a slider Field with', () => {
     test(`name set to 'range'`, () => {
       const { shallowWrapper } = setup(Slider, props);

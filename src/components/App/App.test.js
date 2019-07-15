@@ -9,6 +9,13 @@ describe('App renders', () => {
     expect(shallowWrapper.find(Slider).length).toEqual(1);
   });
 
+  test('a Slider with the initial slider value set to 50', () => {
+    const { shallowWrapper } = setup(App, props);
+    expect(shallowWrapper.find(Slider).prop('initialValues')).toEqual({
+      range: '50'
+    });
+  });
+
   test('a BgImgContainer', () => {
     const { shallowWrapper } = setup(App, props);
     expect(shallowWrapper.find(BgImgContainer).length).toEqual(1);
