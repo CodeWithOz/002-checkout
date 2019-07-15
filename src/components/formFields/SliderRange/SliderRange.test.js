@@ -2,7 +2,8 @@ import SliderRange from './SliderRange';
 
 const props = {
   type: 'test',
-  max: '100'
+  max: '100',
+  min: '1'
 };
 
 describe('SliderRange renders', () => {
@@ -21,5 +22,10 @@ describe('SliderRange correctly passes', () => {
   test(`its 'max' prop to its input element`, () => {
     const { shallowWrapper } = setup(SliderRange, props);
     expect(shallowWrapper.find('input').prop('max')).toEqual(props.max);
+  });
+
+  test(`its 'min' prop to its input element`, () => {
+    const { shallowWrapper } = setup(SliderRange, props);
+    expect(shallowWrapper.find('input').prop('min')).toEqual(props.min);
   });
 });
