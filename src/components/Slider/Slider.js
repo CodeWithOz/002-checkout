@@ -7,7 +7,8 @@ const sliderConfig = {
     component: SliderRange,
     name: 'range',
     type: 'range',
-    max: '100'
+    max: '100',
+    min: '1'
   }
 };
 
