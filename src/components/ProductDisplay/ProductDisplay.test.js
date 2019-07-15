@@ -9,7 +9,7 @@ describe('ProductDisplay renders', () => {
     test('background image set to the bgImgUrl prop', () => {
       const { shallowWrapper } = setup(ProductDisplay, props);
       expect(shallowWrapper.find('div').prop('style').backgroundImage).toEqual(
-        bgImgUrl
+        props.bgImgUrl
       );
     });
   });
