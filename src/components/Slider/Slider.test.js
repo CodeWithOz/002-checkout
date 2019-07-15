@@ -30,5 +30,10 @@ describe('Slider renders', () => {
         'range'
       );
     });
+
+    test(`'max' set to '100'`, () => {
+      const { shallowWrapper } = setup(Slider, props);
+      expect(shallowWrapper.find({ name: 'range' }).prop('max')).toEqual('100');
+    });
   });
 });
