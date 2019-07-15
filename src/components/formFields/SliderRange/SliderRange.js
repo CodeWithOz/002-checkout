@@ -6,5 +6,7 @@ export default function SliderRange({ input, meta, ...restProps }) {
 }
 
 SliderRange.propTypes = {
-  type: PropTypes.string.isRequired
+  type: PropTypes.string.isRequired,
+  max: PropTypes.string,
+  min: PropTypes.string
 };
