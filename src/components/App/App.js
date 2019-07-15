@@ -16,7 +16,7 @@ export default function App() {
   return (
     <div>
       <BgImgContainer bgImgUrl={bgImgUrl}>
-        <ProductDisplay />
+        <ProductDisplay bgImgUrl={bgImgUrl} />
       </BgImgContainer>
       <Slider {...slider} />
     </div>
