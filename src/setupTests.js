@@ -5,8 +5,8 @@ import Adapter from 'enzyme-adapter-react-16';
 configure({ adapter: new Adapter() });
 
 function setup(component, props, renderMethod = 'shallow') {
-  let shallowWrapper,
-    mountWrapper,
+  let shallowWrapper = {},
+    mountWrapper = {},
     wrappers = {};
   const element = createElement(component, props);
 
