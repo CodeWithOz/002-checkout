@@ -1,5 +1,6 @@
 import React from 'react';
+import Breakdown from '../Breakdown/Breakdown';
 
-const Payment = () => <div>Payment</div>;
+const Payment = () => <Breakdown />;
 
 export default Payment;
