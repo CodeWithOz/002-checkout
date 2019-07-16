@@ -5,3 +5,4 @@ export { default as SliderRange } from './formFields/SliderRange/SliderRange';
 export { default as Slider } from './Slider/Slider';
 export { default as Payment } from './Payment/Payment';
 export { default as Breakdown } from './Breakdown/Breakdown';
+export { default as CardInfo } from './CardInfo/CardInfo';
