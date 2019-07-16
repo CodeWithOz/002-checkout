@@ -10,9 +10,10 @@ const breakdownConfig = {
   }
 };
 
-export const BreakdownItem = ({ label }) => (
+export const BreakdownItem = ({ label, value }) => (
   <div>
     <span>{label}</span>
+    <span>{value}</span>
   </div>
 );
 
