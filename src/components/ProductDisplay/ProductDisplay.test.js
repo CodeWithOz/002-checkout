@@ -1,4 +1,4 @@
-import ProductDisplay from './ProductDisplay';
+import { ProductDisplay } from './ProductDisplay';
 
 const props = {
   bgImgUrl: 'test'

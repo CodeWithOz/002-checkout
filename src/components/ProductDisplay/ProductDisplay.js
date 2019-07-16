@@ -1,5 +1,6 @@
 import React from 'react';
-import { string } from 'prop-types';
+import { string, number } from 'prop-types';
+import { connect } from 'react-redux';
 
 const productDisplayConfig = {
   listingTitle: 'Coworking Space, South Korea',
@@ -10,7 +11,7 @@ const productDisplayConfig = {
   }
 };
 
-export default function ProductDisplay({ bgImgUrl }) {
+export function ProductDisplay({ bgImgUrl, price }) {
   const {
     listingTitle,
     numPeople,
@@ -22,7 +23,7 @@ export default function ProductDisplay({ bgImgUrl }) {
       <div>
         <h2>{listingTitle}</h2>
         <p>
-          {1 /* price will go here */} GBP <span>/ 1 day</span>
+          {price} GBP <span>/ 1 day</span>
         </p>
         <p>
           Entire office for <span>{numPeople}</span>
@@ -36,5 +37,10 @@ export default function ProductDisplay({ bgImgUrl }) {
 }
 
 ProductDisplay.propTypes = {
-  bgImgUrl: string
+  bgImgUrl: string,
+  price: number
 };
+
+const mapStateToProps = ({ price }) => ({ price });
+
+export default connect(mapStateToProps)(ProductDisplay);
