@@ -37,5 +37,12 @@ describe('CardInfo renders', () => {
         shallowWrapper.find({ name: 'cc-name' }).prop('placeholder')
       ).toEqual('John Smith');
     });
+
+    test(`'type' set to 'text'`, () => {
+      const { shallowWrapper } = setup(CardInfo, props);
+      expect(shallowWrapper.find({ name: 'cc-name' }).prop('type')).toEqual(
+        'text'
+      );
+    });
   });
 });
