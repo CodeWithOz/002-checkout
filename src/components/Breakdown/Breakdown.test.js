@@ -8,11 +8,21 @@ describe('Breakdown renders', () => {
     const { shallowWrapper } = setup(Breakdown, props);
     expect(shallowWrapper.find(Slider).length).toEqual(1);
   });
+});
 
-  test('a Slider with the initial slider value set to 50', () => {
+describe('Breakdown correctly passes', () => {
+  test('initial slider value of 50', () => {
     const { shallowWrapper } = setup(Breakdown, props);
     expect(shallowWrapper.find(Slider).prop('initialValues')).toEqual({
       range: '50'
     });
+  });
+
+  test('a slider label', () => {
+    const { shallowWrapper } = setup(Breakdown, props);
+    expect(shallowWrapper.find(Slider).prop('label')).toEqual(
+      expect.any(String)
+    );
+    expect(shallowWrapper.find(Slider).prop('label').length).toBeGreaterThan(0);
   });
 });
