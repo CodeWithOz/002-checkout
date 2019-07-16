@@ -5,7 +5,8 @@ const breakdownConfig = {
   slider: {
     initialValues: {
       range: '50'
-    }
+    },
+    label: 'Days'
   }
 };
 
