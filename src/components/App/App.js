@@ -2,7 +2,7 @@ import React from 'react';
 import { BgImgContainer, ProductDisplay, Payment } from '../../components';
 
 const appConfig = {
-  bgImgUrl: 'https://source.unsplash.com/1600x900/?office,room'
+  bgImgUrl: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/jj-2.jpg'
 };
 
 export default function App() {
