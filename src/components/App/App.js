@@ -1,24 +1,18 @@
 import React from 'react';
-import { BgImgContainer, ProductDisplay, Slider } from '../../components';
+import { BgImgContainer, ProductDisplay } from '../../components';
 
 const appConfig = {
-  bgImgUrl: 'https://source.unsplash.com/1600x900/?office,room',
-  slider: {
-    initialValues: {
-      range: '50'
-    }
-  }
+  bgImgUrl: 'https://source.unsplash.com/1600x900/?office,room'
 };
 
 export default function App() {
-  const { bgImgUrl, slider } = appConfig;
+  const { bgImgUrl } = appConfig;
 
   return (
     <div>
       <BgImgContainer bgImgUrl={bgImgUrl}>
         <ProductDisplay bgImgUrl={bgImgUrl} />
       </BgImgContainer>
-      <Slider {...slider} />
     </div>
   );
 }

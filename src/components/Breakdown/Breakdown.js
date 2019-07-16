@@ -1,5 +1,22 @@
 import React from 'react';
+import { Slider } from '../../components';
 
-const Breakdown = () => <div>Breakdown</div>;
+const breakdownConfig = {
+  slider: {
+    initialValues: {
+      range: '50'
+    }
+  }
+};
+
+const Breakdown = () => {
+  const { slider } = breakdownConfig;
+
+  return (
+    <div>
+      <Slider {...slider} />
+    </div>
+  );
+};
 
 export default Breakdown;
