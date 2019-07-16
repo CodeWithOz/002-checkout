@@ -12,12 +12,13 @@ const sliderConfig = {
   }
 };
 
-export function Slider() {
+export function Slider({ label }) {
   const { field } = sliderConfig;
+  const fieldProps = { ...field, label };
 
   return (
     <form>
-      <Field {...field} />
+      <Field {...fieldProps} />
     </form>
   );
 }
