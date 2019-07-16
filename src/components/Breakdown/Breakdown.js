@@ -10,6 +10,8 @@ const breakdownConfig = {
   }
 };
 
+export const BreakdownItem = () => null;
+
 const Breakdown = () => {
   const { slider } = breakdownConfig;
 
