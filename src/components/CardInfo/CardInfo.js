@@ -1,10 +1,12 @@
 import React from 'react';
 import { reduxForm, Field } from 'redux-form';
+import { TextField } from '../../components';
 
 const cardInfoConfig = {
   ccName: {
     name: 'cc-name',
-    label: 'NAME ON CREDIT CARD'
+    label: 'NAME ON CREDIT CARD',
+    component: TextField
   }
 };
 
