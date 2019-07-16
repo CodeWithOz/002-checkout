@@ -7,7 +7,8 @@ const cardInfoConfig = {
     name: 'cc-name',
     label: 'NAME ON CREDIT CARD',
     component: TextField,
-    placeholder: 'John Smith'
+    placeholder: 'John Smith',
+    type: 'text'
   }
 };
 
