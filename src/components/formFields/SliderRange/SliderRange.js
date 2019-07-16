@@ -1,12 +1,21 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { string, object } from 'prop-types';
 
-export default function SliderRange({ input, meta, ...restProps }) {
-  return <input {...restProps} {...input} />;
+export default function SliderRange({ input, meta, label, ...restProps }) {
+  return (
+    <div>
+      <label htmlFor={input.name}>{label}</label>
+      <input {...restProps} {...input} />
+    </div>
+  );
 }
 
 SliderRange.propTypes = {
-  type: PropTypes.string.isRequired,
-  max: PropTypes.string,
-  min: PropTypes.string
+  type: string.isRequired,
+  max: string,
+  min: string,
+
+  // provided by Redux Form
+  input: object,
+  meta: object
 };
