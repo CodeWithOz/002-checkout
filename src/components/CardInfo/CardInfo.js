@@ -1,11 +1,21 @@
 import React from 'react';
-import { reduxForm } from 'redux-form';
+import { reduxForm, Field } from 'redux-form';
+
+const cardInfoConfig = {
+  ccName: {
+    name: 'cc-name'
+  }
+};
 
 export function CardInfo() {
+  const { ccName } = cardInfoConfig;
+
   return (
     <div>
       <h3>Payment Information</h3>
-      <form>CardInfo</form>
+      <form>
+        <Field {...ccName} />
+      </form>
     </div>
   );
 }

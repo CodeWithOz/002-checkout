@@ -1,4 +1,5 @@
 import { CardInfo } from './CardInfo';
+import { Field } from 'redux-form';
 
 const props = {};
 
