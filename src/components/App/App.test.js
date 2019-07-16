@@ -33,7 +33,7 @@ describe('App correctly passes', () => {
     });
   });
 
-  test('a ProductDisplay as the a of the BgImgContainer', () => {
+  test('a ProductDisplay in the children of the BgImgContainer', () => {
     const { shallowWrapper } = setup(App, props);
     expect(
       shallowWrapper.find(BgImgContainer).find(ProductDisplay).length
