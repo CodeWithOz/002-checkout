@@ -1,8 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Breakdown } from '../../components';
+import { Breakdown, CardInfo } from '../../components';
 
-export const Payment = props => <Breakdown {...props} />;
+export const Payment = props => (
+  <>
+    <Breakdown {...props} />
+    <CardInfo />
+  </>
+);
 
 const mapStateToProps = ({ price, discount, tax, form }) => {
   const stateAsProps = { price, discount, tax };
