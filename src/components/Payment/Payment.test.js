@@ -1,4 +1,4 @@
-import Payment from './Payment';
+import { Payment } from './Payment';
 import { Breakdown } from '../../components';
 
 const props = { discount: 9 };

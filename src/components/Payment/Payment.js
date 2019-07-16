@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Breakdown } from '../../components';
 
-const Payment = () => <Breakdown />;
+export const Payment = () => <Breakdown />;
 
 const mapStateToProps = ({ price, discount, tax, form }) => {
   const stateAsProps = { price, discount, tax };
