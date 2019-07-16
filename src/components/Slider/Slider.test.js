@@ -2,7 +2,7 @@ import { Field } from 'redux-form';
 import { Slider } from './Slider';
 import { SliderRange } from '../../components';
 
-const props = {};
+const props = { label: 'test' };
 
 describe('Slider renders', () => {
   test('a form', () => {
@@ -40,5 +40,14 @@ describe('Slider renders', () => {
       const { shallowWrapper } = setup(Slider, props);
       expect(shallowWrapper.find({ name: 'range' }).prop('min')).toEqual('1');
     });
+  });
+});
+
+describe('Slider correctly passes', () => {
+  test(`its 'label' prop to the slider Field`, () => {
+    const { shallowWrapper } = setup(Slider, props);
+    expect(shallowWrapper.find({ name: 'range' }).prop('label')).toEqual(
+      props.label
+    );
   });
 });
