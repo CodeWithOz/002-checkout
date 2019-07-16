@@ -1,5 +1,5 @@
 import App from './App';
-import { BgImgContainer, ProductDisplay } from '../../components';
+import { BgImgContainer, ProductDisplay, Payment } from '../../components';
 
 const props = {};
 
@@ -32,11 +32,18 @@ describe('App correctly passes', () => {
       ).toBeGreaterThan(0);
     });
   });
+});
 
-  test('a ProductDisplay in the children of the BgImgContainer', () => {
+describe(`App's BgImgContainer contains`, () => {
+  test('ProductDisplay', () => {
     const { shallowWrapper } = setup(App, props);
     expect(
       shallowWrapper.find(BgImgContainer).find(ProductDisplay).length
     ).toEqual(1);
+  });
+
+  test('Payment', () => {
+    const { shallowWrapper } = setup(App, props);
+    expect(shallowWrapper.find(BgImgContainer).find(Payment).length).toEqual(1);
   });
 });
