@@ -1,4 +1,4 @@
-import Breakdown from './Breakdown';
+import Breakdown, { BreakdownItem } from './Breakdown';
 import { Slider } from '../../components';
 
 const props = {};
@@ -24,5 +24,14 @@ describe('Breakdown correctly passes', () => {
       expect.any(String)
     );
     expect(shallowWrapper.find(Slider).prop('label').length).toBeGreaterThan(0);
+  });
+});
+
+describe('BreakdownItem renders', () => {
+  const breakdownItemProps = { label: 'testLabel', value: 'testValue' };
+
+  test(`its 'label' prop`, () => {
+    const { shallowWrapper } = setup(BreakdownItem, breakdownItemProps);
+    expect(shallowWrapper.text()).toContain(breakdownItemProps.label);
   });
 });
