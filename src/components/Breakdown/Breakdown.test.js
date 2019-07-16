@@ -34,4 +34,9 @@ describe('BreakdownItem renders', () => {
     const { shallowWrapper } = setup(BreakdownItem, breakdownItemProps);
     expect(shallowWrapper.text()).toContain(breakdownItemProps.label);
   });
+
+  test(`its 'value' prop`, () => {
+    const { shallowWrapper } = setup(BreakdownItem, breakdownItemProps);
+    expect(shallowWrapper.text()).toContain(breakdownItemProps.value);
+  });
 });
