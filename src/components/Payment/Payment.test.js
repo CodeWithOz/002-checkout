@@ -1,5 +1,5 @@
 import { Payment } from './Payment';
-import { Breakdown } from '../../components';
+import { Breakdown, CardInfo } from '../../components';
 
 const props = { discount: 9 };
 
@@ -7,6 +7,11 @@ describe('Payment renders', () => {
   test('a Breakdown component', () => {
     const { shallowWrapper } = setup(Payment, props);
     expect(shallowWrapper.find(Breakdown).length).toEqual(1);
+  });
+
+  test('a CardInfo component', () => {
+    const { shallowWrapper } = setup(Payment, props);
+    expect(shallowWrapper.find(CardInfo).length).toEqual(1);
   });
 });
 
