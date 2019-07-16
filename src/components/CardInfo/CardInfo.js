@@ -3,7 +3,8 @@ import { reduxForm, Field } from 'redux-form';
 
 const cardInfoConfig = {
   ccName: {
-    name: 'cc-name'
+    name: 'cc-name',
+    label: 'NAME ON CREDIT CARD'
   }
 };
 
