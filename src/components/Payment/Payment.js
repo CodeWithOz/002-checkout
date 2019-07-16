@@ -1,5 +1,5 @@
 import React from 'react';
-import Breakdown from '../Breakdown/Breakdown';
+import { Breakdown } from '../../components';
 
 const Payment = () => <Breakdown />;
 

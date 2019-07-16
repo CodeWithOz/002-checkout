@@ -1,5 +1,5 @@
 import Breakdown from './Breakdown';
-import Slider from '../Slider/Slider';
+import { Slider } from '../../components';
 
 const props = {};
 

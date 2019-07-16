@@ -1,5 +1,5 @@
 import Payment from './Payment';
-import Breakdown from '../Breakdown/Breakdown';
+import { Breakdown } from '../../components';
 
 const props = {};
 
