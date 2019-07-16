@@ -1,5 +1,6 @@
-import { CardInfo } from './CardInfo';
 import { Field } from 'redux-form';
+import { CardInfo } from './CardInfo';
+import { TextField } from '../../components';
 
 const props = {};
 
@@ -21,6 +22,13 @@ describe('CardInfo renders', () => {
       expect(shallowWrapper.find({ name: 'cc-name' }).prop('label')).toEqual(
         'NAME ON CREDIT CARD'
       );
+    });
+
+    test(`'component' set to TextField`, () => {
+      const { shallowWrapper } = setup(CardInfo, props);
+      expect(
+        shallowWrapper.find({ name: 'cc-name' }).prop('component')
+      ).toEqual(TextField);
     });
   });
 });
