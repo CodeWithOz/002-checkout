@@ -1,10 +1,11 @@
 import Payment from './Payment';
+import Breakdown from '../Breakdown/Breakdown';
 
 const props = {};
 
 describe('Payment renders', () => {
-  test('something', () => {
+  test('a Breakdown component', () => {
     const { shallowWrapper } = setup(Payment, props);
-    expect(shallowWrapper.children()).toBeDefined();
+    expect(shallowWrapper.find(Breakdown).length).toEqual(1);
   });
 });
