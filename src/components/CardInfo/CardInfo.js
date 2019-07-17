@@ -5,6 +5,7 @@ import { TextField } from '../../components';
 const cardInfoConfig = {
   ccName: {
     name: 'cc-name',
+    id: 'cc-name',
     label: 'NAME ON CREDIT CARD',
     component: TextField,
     placeholder: 'John Smith',
