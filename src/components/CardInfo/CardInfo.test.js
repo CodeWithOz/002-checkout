@@ -68,5 +68,12 @@ describe('CardInfo renders', () => {
         shallowWrapper.find({ name: 'cc-number' }).prop('component')
       ).toEqual(TextField);
     });
+
+    test(`'placeholder' set to '0000 0000 0000 0000'`, () => {
+      const { shallowWrapper } = setup(CardInfo, props);
+      expect(
+        shallowWrapper.find({ name: 'cc-number' }).prop('placeholder')
+      ).toEqual('0000 0000 0000 0000');
+    });
   });
 });
