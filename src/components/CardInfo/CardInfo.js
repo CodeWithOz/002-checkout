@@ -10,17 +10,29 @@ const cardInfoConfig = {
     component: TextField,
     placeholder: 'John Smith',
     type: 'text'
+  },
+  ccNumber: {
+    name: 'cc-number',
+    id: 'cc-number',
+    label: 'CREDIT CARD NUMBER',
+    component: TextField,
+    placeholder: '0000 0000 0000 0000',
+
+    // 'number' type is normally not a good fit for credit card numbers
+    // using it because that's what React Daily UI originally used
+    type: 'number'
   }
 };
 
 export function CardInfo() {
-  const { ccName } = cardInfoConfig;
+  const { ccName, ccNumber } = cardInfoConfig;
 
   return (
     <div>
       <h3>Payment Information</h3>
       <form>
         <Field {...ccName} />
+        <Field {...ccNumber} />
       </form>
     </div>
   );
