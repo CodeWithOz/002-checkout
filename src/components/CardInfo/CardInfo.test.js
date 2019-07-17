@@ -61,5 +61,12 @@ describe('CardInfo renders', () => {
         'CREDIT CARD NUMBER'
       );
     });
+
+    test(`'component' set to TextField`, () => {
+      const { shallowWrapper } = setup(CardInfo, props);
+      expect(
+        shallowWrapper.find({ name: 'cc-number' }).prop('component')
+      ).toEqual(TextField);
+    });
   });
 });
