@@ -54,5 +54,12 @@ describe('CardInfo renders', () => {
         true
       );
     });
+
+    test(`'label' set to 'CREDIT CARD NUMBER'`, () => {
+      const { shallowWrapper } = setup(CardInfo, props);
+      expect(shallowWrapper.find({ name: 'cc-number' }).prop('label')).toEqual(
+        'CREDIT CARD NUMBER'
+      );
+    });
   });
 });
