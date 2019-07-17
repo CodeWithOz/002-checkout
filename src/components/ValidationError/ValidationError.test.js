@@ -17,4 +17,11 @@ describe('ValidationError renders', () => {
     ({ shallowWrapper } = setup(ValidationError, getProps(false, undefined)));
     expect(shallowWrapper.children().exists()).toEqual(false);
   });
+
+  test('meta.error when both meta.touched and meta.error are truthy', () => {
+    const error = 'testError';
+    const { shallowWrapper } = setup(ValidationError, getProps(true, error));
+    expect(shallowWrapper.children().exists()).toEqual(true);
+    expect(shallowWrapper.text()).toContain(error);
+  });
 });
