@@ -1,6 +1,11 @@
 import TextField from './TextField';
 
-const props = { id: 'testId', label: 'testLabel', type: 'testType' };
+const props = {
+  id: 'testId',
+  label: 'testLabel',
+  type: 'testType',
+  placeholder: 'testPlaceholder'
+};
 
 describe('TextField renders', () => {
   test('renders an input element', () => {
@@ -20,5 +25,12 @@ describe('TextField correctly passes', () => {
   test(`its 'type' prop to the input element`, () => {
     const { shallowWrapper } = setup(TextField, props);
     expect(shallowWrapper.find('input').prop('type')).toEqual(props.type);
+  });
+
+  test(`its 'placeholder' prop to the input element`, () => {
+    const { shallowWrapper } = setup(TextField, props);
+    expect(shallowWrapper.find('input').prop('placeholder')).toEqual(
+      props.placeholder
+    );
   });
 });
