@@ -5,7 +5,7 @@ const props = {
   max: '100',
   min: '1',
   label: 'testLabel',
-  input: { name: 'testName' }
+  id: 'testId'
 };
 
 describe('SliderRange renders', () => {
@@ -17,9 +17,7 @@ describe('SliderRange renders', () => {
   test('a label for the input element', () => {
     const { shallowWrapper } = setup(SliderRange, props);
     expect(shallowWrapper.find('label').length).toEqual(1);
-    expect(shallowWrapper.find('label').prop('htmlFor')).toEqual(
-      props.input.name
-    );
+    expect(shallowWrapper.find('label').prop('htmlFor')).toEqual(props.id);
     expect(shallowWrapper.find('label').text()).toEqual(props.label);
   });
 });
