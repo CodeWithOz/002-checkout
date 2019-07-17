@@ -7,7 +7,7 @@ export default function TextField({ label, meta, ...restProps }) {
       <label htmlFor={restProps.id}>{label}</label>
       <input {...restProps} />
       <p>
-        <ValidationError />
+        <ValidationError meta={meta} />
       </p>
     </div>
   );
