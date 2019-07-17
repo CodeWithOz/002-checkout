@@ -1,4 +1,5 @@
 import TextField from './TextField';
+import { ValidationError } from '../../../components';
 
 const props = {
   id: 'testId',
@@ -18,6 +19,11 @@ describe('TextField renders', () => {
     expect(shallowWrapper.find('label').length).toEqual(1);
     expect(shallowWrapper.find('label').prop('htmlFor')).toEqual(props.id);
     expect(shallowWrapper.find('label').text()).toContain(props.label);
+  });
+
+  test('renders a ValidationError component', () => {
+    const { shallowWrapper } = setup(TextField, props);
+    expect(shallowWrapper.find(ValidationError).length).toEqual(1);
   });
 });
 
