@@ -1,4 +1,5 @@
 import React from 'react';
+import { number } from 'prop-types';
 import { Slider } from '../../components';
 
 const breakdownConfig = {
@@ -60,6 +61,13 @@ const Breakdown = ({ days, price, discount, tax }) => {
       </ul>
     </div>
   );
+};
+
+Breakdown.propTypes = {
+  days: number,
+  price: number,
+  discount: number,
+  tax: number
 };
 
 export default Breakdown;
