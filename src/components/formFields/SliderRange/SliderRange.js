@@ -1,11 +1,11 @@
 import React from 'react';
 import { string, object } from 'prop-types';
 
-export default function SliderRange({ input, meta, label, ...restProps }) {
+export default function SliderRange({ meta, label, ...restProps }) {
   return (
     <div>
-      <label htmlFor={input.name}>{label}</label>
-      <input {...restProps} {...input} />
+      <label htmlFor={restProps.id}>{label}</label>
+      <input {...restProps} />
     </div>
   );
 }
