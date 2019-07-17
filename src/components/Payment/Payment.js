@@ -16,8 +16,7 @@ const mapStateToProps = ({ price, discount, tax, form }) => {
   const formReady =
     form && form.Slider && form.Slider.values && form.Slider.values.range;
   if (formReady) {
-    // TODO: convert the range to a number
-    stateAsProps.days = form.Slider.values.range;
+    stateAsProps.days = Number(form.Slider.values.range);
   }
 
   return stateAsProps;
