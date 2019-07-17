@@ -45,4 +45,14 @@ describe('CardInfo renders', () => {
       );
     });
   });
+
+  describe('a credit card number Field with', () => {
+    test(`'name' set to 'cc-number'`, () => {
+      const { shallowWrapper } = setup(CardInfo, props);
+      expect(shallowWrapper.find({ name: 'cc-number' }).length).toEqual(1);
+      expect(shallowWrapper.find({ name: 'cc-number' }).is(Field)).toEqual(
+        true
+      );
+    });
+  });
 });
