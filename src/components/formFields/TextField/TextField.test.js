@@ -5,7 +5,8 @@ const props = {
   id: 'testId',
   label: 'testLabel',
   type: 'testType',
-  placeholder: 'testPlaceholder'
+  placeholder: 'testPlaceholder',
+  meta: { touched: true, error: 'testError' }
 };
 
 describe('TextField renders', () => {
@@ -37,6 +38,13 @@ describe('TextField correctly passes', () => {
     const { shallowWrapper } = setup(TextField, props);
     expect(shallowWrapper.find('input').prop('placeholder')).toEqual(
       props.placeholder
+    );
+  });
+
+  test(`its 'meta' prop to the ValidationError component`, () => {
+    const { shallowWrapper } = setup(TextField, props);
+    expect(shallowWrapper.find(ValidationError).prop('meta')).toEqual(
+      props.meta
     );
   });
 });
