@@ -92,5 +92,12 @@ describe('CardInfo renders', () => {
         true
       );
     });
+
+    test(`'label' set to 'EXPIRY MONTH'`, () => {
+      const { shallowWrapper } = setup(CardInfo, props);
+      expect(
+        shallowWrapper.find({ name: 'expiry-month' }).prop('label')
+      ).toEqual('EXPIRY MONTH');
+    });
   });
 });
