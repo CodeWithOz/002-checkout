@@ -1,5 +1,10 @@
 import React from 'react';
 
 export default function SelectDropdown() {
-  return <select>SelectDropdown</select>;
+  return (
+    <div>
+      <label />
+      <select>SelectDropdown</select>
+    </div>
+  );
 }
