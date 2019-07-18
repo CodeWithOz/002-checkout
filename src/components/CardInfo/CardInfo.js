@@ -1,5 +1,6 @@
 import React from 'react';
 import { reduxForm, Field } from 'redux-form';
+import { func } from 'prop-types';
 import { TextField, SelectDropdown } from '../../components';
 
 const cardInfoConfig = {
@@ -64,13 +65,13 @@ const cardInfoConfig = {
   }
 };
 
-export function CardInfo() {
+export function CardInfo({ handleSubmit }) {
   const { ccName, ccNumber, expiryMonth, expiryYear, ccCVC } = cardInfoConfig;
 
   return (
     <div>
       <h3>Payment Information</h3>
-      <form>
+      <form onSubmit={handleSubmit}>
         <Field {...ccName} />
         <Field {...ccNumber} />
         <Field {...expiryMonth} />
@@ -81,5 +82,9 @@ export function CardInfo() {
     </div>
   );
 }
+
+CardInfo.propTypes = {
+  handleSubmit: func
+};
 
 export default reduxForm({ form: 'CardInfo' })(CardInfo);
