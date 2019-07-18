@@ -22,5 +22,10 @@ describe('SelectDropdown correctly passes', () => {
       const { shallowWrapper } = setup(SelectDropdown, props);
       expect(shallowWrapper.find('label').prop('htmlFor')).toEqual(props.id);
     });
+
+    test(`its select element as the 'id' attribute`, () => {
+      const { shallowWrapper } = setup(SelectDropdown, props);
+      expect(shallowWrapper.find('select').prop('id')).toEqual(props.id);
+    });
   });
 });
