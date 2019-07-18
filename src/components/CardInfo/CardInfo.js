@@ -27,7 +27,7 @@ const cardInfoConfig = {
     id: 'expiry-month',
     label: 'EXPIRY MONTH',
     component: SelectDropdown,
-    placeholder: 'Month',
+    placeholder: 'Choose a month',
     options: [
       'january',
       'february',
