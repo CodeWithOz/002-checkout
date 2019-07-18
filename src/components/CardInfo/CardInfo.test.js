@@ -107,11 +107,11 @@ describe('CardInfo renders', () => {
       ).toEqual(SelectDropdown);
     });
 
-    test(`'placeholder' set to 'Month'`, () => {
+    test(`'placeholder' set to 'Choose a month'`, () => {
       const { shallowWrapper } = setup(CardInfo, props);
       expect(
         shallowWrapper.find({ name: 'expiry-month' }).prop('placeholder')
-      ).toEqual('Month');
+      ).toEqual('Choose a month');
     });
 
     test(`'options' set to a non-empty array`, () => {
