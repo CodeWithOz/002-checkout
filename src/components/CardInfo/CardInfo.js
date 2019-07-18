@@ -42,11 +42,19 @@ const cardInfoConfig = {
       'november',
       'december'
     ]
+  },
+  expiryYear: {
+    name: 'expiry-year',
+    id: 'expiry-year',
+    label: 'EXPIRY YEAR',
+    component: SelectDropdown,
+    placeholder: 'Choose a year',
+    options: ['2016', '2017', '2018', '2019', '2020', '2021']
   }
 };
 
 export function CardInfo() {
-  const { ccName, ccNumber, expiryMonth } = cardInfoConfig;
+  const { ccName, ccNumber, expiryMonth, expiryYear } = cardInfoConfig;
 
   return (
     <div>
@@ -55,6 +63,7 @@ export function CardInfo() {
         <Field {...ccName} />
         <Field {...ccNumber} />
         <Field {...expiryMonth} />
+        <Field {...expiryYear} />
       </form>
     </div>
   );
