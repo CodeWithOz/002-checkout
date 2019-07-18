@@ -80,6 +80,9 @@ export function CardInfo({ handleSubmit, pristine, submitting }) {
         <button disabled={pristine || submitting ? true : false}>
           BOOK SECURELY
         </button>
+        <p>
+          <i className="fas fa-lock" /> Your credit card informationis encrypted
+        </p>
       </form>
     </div>
   );
