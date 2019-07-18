@@ -50,11 +50,22 @@ const cardInfoConfig = {
     component: SelectDropdown,
     placeholder: 'Choose a year',
     options: ['2016', '2017', '2018', '2019', '2020', '2021']
+  },
+  ccCVC: {
+    name: 'cc-cvc',
+    id: 'cc-cvc',
+    label: 'CVC',
+    component: TextField,
+    placeholder: '000',
+
+    // 'number' type is normally not a good fit for CVC numbers
+    // using it because that's what React Daily UI originally used
+    type: 'number'
   }
 };
 
 export function CardInfo() {
-  const { ccName, ccNumber, expiryMonth, expiryYear } = cardInfoConfig;
+  const { ccName, ccNumber, expiryMonth, expiryYear, ccCVC } = cardInfoConfig;
 
   return (
     <div>
@@ -64,6 +75,7 @@ export function CardInfo() {
         <Field {...ccNumber} />
         <Field {...expiryMonth} />
         <Field {...expiryYear} />
+        <Field {...ccCVC} />
       </form>
     </div>
   );
