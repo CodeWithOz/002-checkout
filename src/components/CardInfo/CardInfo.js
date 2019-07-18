@@ -1,6 +1,6 @@
 import React from 'react';
 import { reduxForm, Field } from 'redux-form';
-import { TextField } from '../../components';
+import { TextField, SelectDropdown } from '../../components';
 
 const cardInfoConfig = {
   ccName: {
@@ -25,7 +25,8 @@ const cardInfoConfig = {
   expiryMonth: {
     name: 'expiry-month',
     id: 'expiry-month',
-    label: 'EXPIRY MONTH'
+    label: 'EXPIRY MONTH',
+    component: SelectDropdown
   }
 };
 
