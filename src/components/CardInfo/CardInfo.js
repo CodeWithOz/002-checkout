@@ -76,6 +76,7 @@ export function CardInfo() {
         <Field {...expiryMonth} />
         <Field {...expiryYear} />
         <Field {...ccCVC} />
+        <button>BOOK SECURELY</button>
       </form>
     </div>
   );
