@@ -2,7 +2,7 @@ import { Field } from 'redux-form';
 import { CardInfo } from './CardInfo';
 import { TextField, SelectDropdown } from '../../components';
 
-const props = {};
+const props = { handleSubmit: jest.fn() };
 
 describe('CardInfo renders', () => {
   test('a form', () => {
@@ -205,5 +205,14 @@ describe('CardInfo renders', () => {
   test('a button', () => {
     const { shallowWrapper } = setup(CardInfo, props);
     expect(shallowWrapper.find('button').length).toEqual(1);
+  });
+});
+
+describe('CardInfo correctly passes', () => {
+  test(`its 'handleSubmit' prop to its form element's onSubmit prop`, () => {
+    const { shallowWrapper } = setup(CardInfo, props);
+    expect(shallowWrapper.find('form').prop('onSubmit')).toEqual(
+      props.handleSubmit
+    );
   });
 });
