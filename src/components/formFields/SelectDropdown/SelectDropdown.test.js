@@ -1,6 +1,8 @@
 import SelectDropdown from './SelectDropdown';
 
-const props = {};
+const props = {
+  id: 'testId'
+};
 
 describe('SelectDropdown renders', () => {
   test('a select element', () => {
@@ -11,5 +13,14 @@ describe('SelectDropdown renders', () => {
   test('a label element', () => {
     const { shallowWrapper } = setup(SelectDropdown, props);
     expect(shallowWrapper.find('label').length).toEqual(1);
+  });
+});
+
+describe('SelectDropdown correctly passes', () => {
+  describe(`its 'id' prop to`, () => {
+    test(`its label element as the 'htmlFor' attribute`, () => {
+      const { shallowWrapper } = setup(SelectDropdown, props);
+      expect(shallowWrapper.find('label').prop('htmlFor')).toEqual(props.id);
+    });
   });
 });
