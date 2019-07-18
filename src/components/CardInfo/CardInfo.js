@@ -21,11 +21,15 @@ const cardInfoConfig = {
     // 'number' type is normally not a good fit for credit card numbers
     // using it because that's what React Daily UI originally used
     type: 'number'
+  },
+  expiryMonth: {
+    name: 'expiry-month',
+    id: 'expiry-month'
   }
 };
 
 export function CardInfo() {
-  const { ccName, ccNumber } = cardInfoConfig;
+  const { ccName, ccNumber, expiryMonth } = cardInfoConfig;
 
   return (
     <div>
@@ -33,6 +37,7 @@ export function CardInfo() {
       <form>
         <Field {...ccName} />
         <Field {...ccNumber} />
+        <Field {...expiryMonth} />
       </form>
     </div>
   );
