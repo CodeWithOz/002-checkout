@@ -2,7 +2,8 @@ import SelectDropdown from './SelectDropdown';
 
 const props = {
   id: 'testId',
-  placeholder: 'testPlaceholder'
+  placeholder: 'testPlaceholder',
+  label: 'testLabel'
 };
 
 describe('SelectDropdown renders', () => {
@@ -38,5 +39,10 @@ describe('SelectDropdown correctly passes', () => {
         .at(0)
         .text()
     ).toEqual(props.placeholder);
+  });
+
+  test(`its 'label' prop as the child of the label element`, () => {
+    const { shallowWrapper } = setup(SelectDropdown, props);
+    expect(shallowWrapper.find('label').text()).toEqual(props.label);
   });
 });
