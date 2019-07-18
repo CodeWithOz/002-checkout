@@ -2,7 +2,7 @@ import { Field } from 'redux-form';
 import { CardInfo } from './CardInfo';
 import { TextField, SelectDropdown } from '../../components';
 
-const props = { handleSubmit: jest.fn() };
+const props = { handleSubmit: jest.fn(), pristine: true, submitting: false };
 
 describe('CardInfo renders', () => {
   test('a form', () => {
@@ -205,6 +205,26 @@ describe('CardInfo renders', () => {
   test('a button', () => {
     const { shallowWrapper } = setup(CardInfo, props);
     expect(shallowWrapper.find('button').length).toEqual(1);
+  });
+
+  describe('a button which is', () => {
+    afterEach(() => {
+      props.pristine = true;
+      props.submitting = false;
+    });
+
+    test('disabled when form is pristine or submitting', () => {
+      props.pristine = true;
+      props.submitting = true;
+      const { shallowWrapper } = setup(CardInfo, props);
+      expect(shallowWrapper.find('button').prop('disabled')).toEqual(true);
+      props.pristine = false;
+      props.submitting = true;
+      expect(shallowWrapper.find('button').prop('disabled')).toEqual(true);
+      props.pristine = true;
+      props.submitting = false;
+      expect(shallowWrapper.find('button').prop('disabled')).toEqual(true);
+    });
   });
 });
 
