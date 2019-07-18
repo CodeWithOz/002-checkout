@@ -3,7 +3,8 @@ import SelectDropdown from './SelectDropdown';
 const props = {
   id: 'testId',
   placeholder: 'testPlaceholder',
-  label: 'testLabel'
+  label: 'testLabel',
+  options: ['test1', 'test2', 'test3']
 };
 
 describe('SelectDropdown renders', () => {
@@ -44,5 +45,24 @@ describe('SelectDropdown correctly passes', () => {
   test(`its 'label' prop as the child of the label element`, () => {
     const { shallowWrapper } = setup(SelectDropdown, props);
     expect(shallowWrapper.find('label').text()).toEqual(props.label);
+  });
+
+  test(`every member of its 'options' prop as an option element`, () => {
+    const { shallowWrapper } = setup(SelectDropdown, props);
+    props.options.forEach((value, idx) => {
+      // placeholder option is at 0-position, so indexes are incremented for checking
+      expect(
+        shallowWrapper
+          .find('option')
+          .at(idx + 1)
+          .text()
+      ).toEqual(value);
+      expect(
+        shallowWrapper
+          .find('option')
+          .at(idx + 1)
+          .prop('value')
+      ).toEqual(value);
+    });
   });
 });
