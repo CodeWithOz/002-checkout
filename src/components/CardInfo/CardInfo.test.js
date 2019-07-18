@@ -1,6 +1,6 @@
 import { Field } from 'redux-form';
 import { CardInfo } from './CardInfo';
-import { TextField } from '../../components';
+import { TextField, SelectDropdown } from '../../components';
 
 const props = {};
 
@@ -98,6 +98,13 @@ describe('CardInfo renders', () => {
       expect(
         shallowWrapper.find({ name: 'expiry-month' }).prop('label')
       ).toEqual('EXPIRY MONTH');
+    });
+
+    test(`'component' set to SelectDropdown`, () => {
+      const { shallowWrapper } = setup(CardInfo, props);
+      expect(
+        shallowWrapper.find({ name: 'expiry-month' }).prop('component')
+      ).toEqual(SelectDropdown);
     });
   });
 });
