@@ -30,7 +30,7 @@ describe('SelectDropdown correctly passes', () => {
     });
   });
 
-  describe(`its 'placeholder' prop as the child of the first option element`, () => {
+  test(`its 'placeholder' prop as the child of the first option element`, () => {
     const { shallowWrapper } = setup(SelectDropdown, props);
     expect(
       shallowWrapper
