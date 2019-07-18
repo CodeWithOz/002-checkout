@@ -2,11 +2,11 @@ import React from 'react';
 import { string, object } from 'prop-types';
 import { ValidationError } from '../../../components';
 
-export default function TextField({ label, meta, ...restProps }) {
+export default function TextField({ label, meta, input, ...restProps }) {
   return (
     <div>
       <label htmlFor={restProps.id}>{label}</label>
-      <input {...restProps} />
+      <input {...input} {...restProps} />
       <p>
         <ValidationError meta={meta} />
       </p>
