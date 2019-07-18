@@ -1,4 +1,5 @@
 import React from 'react';
+import { string } from 'prop-types';
 
 export default function SelectDropdown({ id }) {
   return (
@@ -8,3 +9,7 @@ export default function SelectDropdown({ id }) {
     </div>
   );
 }
+
+SelectDropdown.propTypes = {
+  id: string
+};
