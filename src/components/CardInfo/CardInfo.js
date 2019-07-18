@@ -1,6 +1,6 @@
 import React from 'react';
 import { reduxForm, Field } from 'redux-form';
-import { func } from 'prop-types';
+import { func, bool } from 'prop-types';
 import { TextField, SelectDropdown } from '../../components';
 
 const cardInfoConfig = {
@@ -65,7 +65,7 @@ const cardInfoConfig = {
   }
 };
 
-export function CardInfo({ handleSubmit }) {
+export function CardInfo({ handleSubmit, pristine, submitting }) {
   const { ccName, ccNumber, expiryMonth, expiryYear, ccCVC } = cardInfoConfig;
 
   return (
@@ -77,14 +77,18 @@ export function CardInfo({ handleSubmit }) {
         <Field {...expiryMonth} />
         <Field {...expiryYear} />
         <Field {...ccCVC} />
-        <button>BOOK SECURELY</button>
+        <button disabled={pristine || submitting ? true : false}>
+          BOOK SECURELY
+        </button>
       </form>
     </div>
   );
 }
 
 CardInfo.propTypes = {
-  handleSubmit: func
+  handleSubmit: func,
+  pristine: bool,
+  submitting: bool
 };
 
 export default reduxForm({ form: 'CardInfo' })(CardInfo);
