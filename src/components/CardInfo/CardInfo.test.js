@@ -113,5 +113,15 @@ describe('CardInfo renders', () => {
         shallowWrapper.find({ name: 'expiry-month' }).prop('placeholder')
       ).toEqual('Month');
     });
+
+    test(`'options' set to a non-empty array`, () => {
+      const { shallowWrapper } = setup(CardInfo, props);
+      expect(
+        shallowWrapper.find({ name: 'expiry-month' }).prop('options')
+      ).toEqual(expect.any(Array));
+      expect(
+        shallowWrapper.find({ name: 'expiry-month' }).prop('options').length
+      ).toBeGreaterThan(0);
+    });
   });
 });
