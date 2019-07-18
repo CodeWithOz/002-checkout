@@ -26,7 +26,8 @@ const cardInfoConfig = {
     name: 'expiry-month',
     id: 'expiry-month',
     label: 'EXPIRY MONTH',
-    component: SelectDropdown
+    component: SelectDropdown,
+    placeholder: 'Month'
   }
 };
 
