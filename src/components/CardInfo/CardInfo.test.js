@@ -201,4 +201,9 @@ describe('CardInfo renders', () => {
       );
     });
   });
+
+  test('a button', () => {
+    const { shallowWrapper } = setup(CardInfo, props);
+    expect(shallowWrapper.find('button').length).toEqual(1);
+  });
 });
