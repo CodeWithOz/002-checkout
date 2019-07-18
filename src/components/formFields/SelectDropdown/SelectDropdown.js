@@ -4,7 +4,7 @@ export default function SelectDropdown({ id }) {
   return (
     <div>
       <label htmlFor={id} />
-      <select>SelectDropdown</select>
+      <select id={id}>SelectDropdown</select>
     </div>
   );
 }
