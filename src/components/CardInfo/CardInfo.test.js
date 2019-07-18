@@ -124,4 +124,45 @@ describe('CardInfo renders', () => {
       ).toBeGreaterThan(0);
     });
   });
+
+  describe('an expiry year Field with', () => {
+    test(`'name' set to 'expiry-year'`, () => {
+      const { shallowWrapper } = setup(CardInfo, props);
+      expect(shallowWrapper.find({ name: 'expiry-year' }).length).toEqual(1);
+      expect(shallowWrapper.find({ name: 'expiry-year' }).is(Field)).toEqual(
+        true
+      );
+    });
+
+    test(`'label' set to 'EXPIRY YEAR'`, () => {
+      const { shallowWrapper } = setup(CardInfo, props);
+      expect(
+        shallowWrapper.find({ name: 'expiry-year' }).prop('label')
+      ).toEqual('EXPIRY YEAR');
+    });
+
+    test(`'component' set to SelectDropdown`, () => {
+      const { shallowWrapper } = setup(CardInfo, props);
+      expect(
+        shallowWrapper.find({ name: 'expiry-year' }).prop('component')
+      ).toEqual(SelectDropdown);
+    });
+
+    test(`'placeholder' set to 'Choose a year'`, () => {
+      const { shallowWrapper } = setup(CardInfo, props);
+      expect(
+        shallowWrapper.find({ name: 'expiry-year' }).prop('placeholder')
+      ).toEqual('Choose a year');
+    });
+
+    test(`'options' set to a non-empty array`, () => {
+      const { shallowWrapper } = setup(CardInfo, props);
+      expect(
+        shallowWrapper.find({ name: 'expiry-year' }).prop('options')
+      ).toEqual(expect.any(Array));
+      expect(
+        shallowWrapper.find({ name: 'expiry-year' }).prop('options').length
+      ).toBeGreaterThan(0);
+    });
+  });
 });
