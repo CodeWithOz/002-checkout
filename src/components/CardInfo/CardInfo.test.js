@@ -165,4 +165,40 @@ describe('CardInfo renders', () => {
       ).toBeGreaterThan(0);
     });
   });
+
+  describe('a credit card number Field with', () => {
+    test(`'name' set to 'cc-cvc'`, () => {
+      const { shallowWrapper } = setup(CardInfo, props);
+      expect(shallowWrapper.find({ name: 'cc-cvc' }).length).toEqual(1);
+      expect(shallowWrapper.find({ name: 'cc-cvc' }).is(Field)).toEqual(true);
+    });
+
+    test(`'label' set to 'CVC'`, () => {
+      const { shallowWrapper } = setup(CardInfo, props);
+      expect(shallowWrapper.find({ name: 'cc-cvc' }).prop('label')).toEqual(
+        'CVC'
+      );
+    });
+
+    test(`'component' set to TextField`, () => {
+      const { shallowWrapper } = setup(CardInfo, props);
+      expect(shallowWrapper.find({ name: 'cc-cvc' }).prop('component')).toEqual(
+        TextField
+      );
+    });
+
+    test(`'placeholder' set to '000'`, () => {
+      const { shallowWrapper } = setup(CardInfo, props);
+      expect(
+        shallowWrapper.find({ name: 'cc-cvc' }).prop('placeholder')
+      ).toEqual('000');
+    });
+
+    test(`'type' set to 'number'`, () => {
+      const { shallowWrapper } = setup(CardInfo, props);
+      expect(shallowWrapper.find({ name: 'cc-cvc' }).prop('type')).toEqual(
+        'number'
+      );
+    });
+  });
 });
