@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, object } from 'prop-types';
+import { string, object, array } from 'prop-types';
 
 export default function SelectDropdown({
   input,
@@ -27,6 +27,8 @@ export default function SelectDropdown({
 SelectDropdown.propTypes = {
   id: string,
   placeholder: string,
+  options: array,
+  label: string,
 
   // from redux form
   input: object,
