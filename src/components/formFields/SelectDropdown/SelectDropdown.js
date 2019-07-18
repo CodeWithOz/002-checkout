@@ -5,11 +5,12 @@ export default function SelectDropdown({
   input,
   meta,
   placeholder,
+  label,
   ...restProps
 }) {
   return (
     <div>
-      <label htmlFor={restProps.id} />
+      <label htmlFor={restProps.id}>{label}</label>
       <select {...input} {...restProps}>
         <option value="">{placeholder}</option>
       </select>
