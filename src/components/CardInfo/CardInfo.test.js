@@ -83,4 +83,14 @@ describe('CardInfo renders', () => {
       );
     });
   });
+
+  describe('an expiry month Field with', () => {
+    test(`'name' set to 'expiry-month'`, () => {
+      const { shallowWrapper } = setup(CardInfo, props);
+      expect(shallowWrapper.find({ name: 'expiry-month' }).length).toEqual(1);
+      expect(shallowWrapper.find({ name: 'expiry-month' }).is(Field)).toEqual(
+        true
+      );
+    });
+  });
 });
