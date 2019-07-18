@@ -24,7 +24,8 @@ const cardInfoConfig = {
   },
   expiryMonth: {
     name: 'expiry-month',
-    id: 'expiry-month'
+    id: 'expiry-month',
+    label: 'EXPIRY MONTH'
   }
 };
 
