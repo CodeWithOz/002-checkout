@@ -1,7 +1,8 @@
 import SelectDropdown from './SelectDropdown';
 
 const props = {
-  id: 'testId'
+  id: 'testId',
+  placeholder: 'testPlaceholder'
 };
 
 describe('SelectDropdown renders', () => {
@@ -27,5 +28,15 @@ describe('SelectDropdown correctly passes', () => {
       const { shallowWrapper } = setup(SelectDropdown, props);
       expect(shallowWrapper.find('select').prop('id')).toEqual(props.id);
     });
+  });
+
+  describe(`its 'placeholder' prop as the child of the first option element`, () => {
+    const { shallowWrapper } = setup(SelectDropdown, props);
+    expect(
+      shallowWrapper
+        .find('option')
+        .at(0)
+        .children()
+    ).toEqual(props.placeholder);
   });
 });
