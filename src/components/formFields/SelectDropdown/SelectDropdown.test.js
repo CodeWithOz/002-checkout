@@ -36,7 +36,7 @@ describe('SelectDropdown correctly passes', () => {
       shallowWrapper
         .find('option')
         .at(0)
-        .children()
+        .text()
     ).toEqual(props.placeholder);
   });
 });

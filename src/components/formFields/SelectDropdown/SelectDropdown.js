@@ -1,15 +1,27 @@
 import React from 'react';
-import { string } from 'prop-types';
+import { string, object } from 'prop-types';
 
-export default function SelectDropdown({ id }) {
+export default function SelectDropdown({
+  input,
+  meta,
+  placeholder,
+  ...restProps
+}) {
   return (
     <div>
-      <label htmlFor={id} />
-      <select id={id}>SelectDropdown</select>
+      <label htmlFor={restProps.id} />
+      <select {...input} {...restProps}>
+        <option value="">{placeholder}</option>
+      </select>
     </div>
   );
 }
 
 SelectDropdown.propTypes = {
-  id: string
+  id: string,
+  placeholder: string,
+
+  // from redux form
+  input: object,
+  meta: object
 };
