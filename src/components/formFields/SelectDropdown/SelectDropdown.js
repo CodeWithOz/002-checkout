@@ -6,6 +6,7 @@ export default function SelectDropdown({
   meta,
   placeholder,
   label,
+  options,
   ...restProps
 }) {
   return (
@@ -13,6 +14,11 @@ export default function SelectDropdown({
       <label htmlFor={restProps.id}>{label}</label>
       <select {...input} {...restProps}>
         <option value="">{placeholder}</option>
+        {options.map((value, idx) => (
+          <option value={value} key={idx}>
+            {value}
+          </option>
+        ))}
       </select>
     </div>
   );
