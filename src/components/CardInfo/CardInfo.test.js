@@ -106,5 +106,12 @@ describe('CardInfo renders', () => {
         shallowWrapper.find({ name: 'expiry-month' }).prop('component')
       ).toEqual(SelectDropdown);
     });
+
+    test(`'placeholder' set to 'Month'`, () => {
+      const { shallowWrapper } = setup(CardInfo, props);
+      expect(
+        shallowWrapper.find({ name: 'expiry-month' }).prop('placeholder')
+      ).toEqual('Month');
+    });
   });
 });
