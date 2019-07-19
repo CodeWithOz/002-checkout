@@ -90,7 +90,7 @@ export function CardInfo({
         >
           BOOK SECURELY
         </button>
-        <p>
+        <p className={styles.notice}>
           <i className="fas fa-lock" /> Your credit card information is
           encrypted
         </p>

@@ -29,3 +29,10 @@
 .button:active {
   transform: scale(0.99);
 }
+
+.notice {
+  color: #bbb;
+  font-size: 0.9em;
+  text-align: center;
+  font-weight: 300;
+}
