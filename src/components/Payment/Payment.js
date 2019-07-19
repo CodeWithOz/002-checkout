@@ -9,7 +9,7 @@ export const Payment = props => (
   <div className={styles.root}>
     <Breakdown rootClassName={styles.margin} {...props} />
     <hr className={styles.hr} />
-    <CardInfo rootClassName={styles.margin} />
+    <CardInfo onSubmit={() => null} rootClassName={styles.margin} />
   </div>
 );
 
