@@ -1,7 +1,7 @@
 import { Payment } from './Payment';
 import { Breakdown, CardInfo } from '../../components';
 
-const props = { discount: 9 };
+const props = { discount: 9, price: 100 };
 
 describe('Payment renders', () => {
   test('a Breakdown component', () => {
@@ -21,5 +21,10 @@ describe('Payment correctly passes', () => {
     expect(shallowWrapper.find(Breakdown).prop('discount')).toEqual(
       props.discount
     );
+  });
+
+  test(`its 'price' prop to Breakdown`, () => {
+    const { shallowWrapper } = setup(Payment, props);
+    expect(shallowWrapper.find(Breakdown).prop('price')).toEqual(props.price);
   });
 });
