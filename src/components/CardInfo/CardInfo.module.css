@@ -1,6 +1,8 @@
 @import '../../sharedStyles.css';
 
 .heading {
-  margin: 0;
+  margin: 1em 0;
   font-family: 'Playfair Display', serif;
+  font-size: 1.4em;
+  font-weight: 400;
 }
