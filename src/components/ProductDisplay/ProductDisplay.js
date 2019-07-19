@@ -2,6 +2,8 @@ import React from 'react';
 import { string, number } from 'prop-types';
 import { connect } from 'react-redux';
 
+import styles from './ProductDisplay.module.css';
+
 const productDisplayConfig = {
   listingTitle: 'Coworking Space, South Korea',
   numPeople: '1 person',
@@ -19,17 +21,22 @@ export function ProductDisplay({ bgImgUrl, price }) {
   } = productDisplayConfig;
 
   return (
-    <div style={{ backgroundImage: `url(${bgImgUrl})` }}>
+    <div
+      style={{ backgroundImage: `url(${bgImgUrl})` }}
+      className={styles.root}
+    >
       <div>
-        <h2>{listingTitle}</h2>
+        <h2 className={styles.heading}>{listingTitle}</h2>
         <p>
-          {price} GBP <span>/ 1 day</span>
+          <span className={styles.price}>{price} GBP </span>
+          <span className={styles.priceUnit}>/ 1 day</span>
         </p>
-        <p>
-          Entire office for <span>{numPeople}</span>
+        <p className={styles.capacityLine}>
+          Entire office for <span className={styles.capacity}>{numPeople}</span>
         </p>
-        <p>
-          <span>{start}</span> to <span>{end}</span>
+        <p className={styles.datesLine}>
+          <span className={styles.date}>{start}</span> to{' '}
+          <span className={styles.date}>{end}</span>
         </p>
       </div>
     </div>

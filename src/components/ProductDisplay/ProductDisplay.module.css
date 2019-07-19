@@ -1,0 +1,45 @@
+/* font */
+@import 'https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900';
+
+:root {
+  --white: #fff;
+}
+
+.root {
+  display: flex;
+  align-items: flex-end;
+  color: var(--white);
+  padding: 1em;
+}
+
+.heading {
+  font-size: 2.3em;
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+}
+
+.price {
+  font-size: 2em;
+  font-weight: 100;
+}
+
+.priceUnit {
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
+.capacityLine {
+  font-weight: 300;
+}
+
+.capacity {
+  font-weight: 900;
+}
+
+.datesLine {
+  font-weight: 300;
+}
+
+.date {
+  font-weight: 900;
+}
