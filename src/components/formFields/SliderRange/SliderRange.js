@@ -3,13 +3,13 @@ import { string, object } from 'prop-types';
 
 import styles from './SliderRange.module.css';
 
-export default function SliderRange({ meta, label, ...restProps }) {
+export default function SliderRange({ meta, label, input, ...restProps }) {
   return (
     <div className={styles.root}>
       <label htmlFor={restProps.id} className={styles.label}>
         {label}:
       </label>
-      <input {...restProps} />
+      <input {...input} {...restProps} />
     </div>
   );
 }
