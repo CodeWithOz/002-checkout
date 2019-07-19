@@ -1,7 +1,9 @@
 import React from 'react';
 import { reduxForm, Field } from 'redux-form';
-import { func, bool } from 'prop-types';
+import { func, bool, string } from 'prop-types';
 import { TextField, SelectDropdown } from '../../components';
+
+import styles from './CardInfo.module.css';
 
 const cardInfoConfig = {
   ccName: {
@@ -65,12 +67,17 @@ const cardInfoConfig = {
   }
 };
 
-export function CardInfo({ handleSubmit, pristine, submitting }) {
+export function CardInfo({
+  handleSubmit,
+  pristine,
+  submitting,
+  rootClassName
+}) {
   const { ccName, ccNumber, expiryMonth, expiryYear, ccCVC } = cardInfoConfig;
 
   return (
-    <div>
-      <h3>Payment Information</h3>
+    <div className={rootClassName}>
+      <h3 className={styles.heading}>Payment Information</h3>
       <form onSubmit={handleSubmit}>
         <Field {...ccName} />
         <Field {...ccNumber} />
@@ -90,6 +97,7 @@ export function CardInfo({ handleSubmit, pristine, submitting }) {
 }
 
 CardInfo.propTypes = {
+  rootClassName: string,
   handleSubmit: func,
   pristine: bool,
   submitting: bool
