@@ -3,11 +3,13 @@ import { connect } from 'react-redux';
 import { number, object } from 'prop-types';
 import { Breakdown, CardInfo } from '../../components';
 
+import styles from './Payment.module.css';
+
 export const Payment = props => (
-  <>
+  <div className={styles.root}>
     <Breakdown {...props} />
     <CardInfo />
-  </>
+  </div>
 );
 
 const mapStateToProps = ({ price, discount, tax, form }) => {
