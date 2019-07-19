@@ -1,3 +1,5 @@
+@import '../../../sharedStyles.css';
+
 .root {
   margin: 1.5em 0;
 }
@@ -18,7 +20,7 @@
 }
 
 .input:focus {
-  border-bottom-color: pink;
+  border-bottom-color: var(--peachorange);
   outline: none;
   outline-offset: unset;
 }

@@ -6,3 +6,26 @@
   font-size: 1.4em;
   font-weight: 400;
 }
+
+.button {
+  color: white;
+  background-color: var(--peachorange);
+  width: 100%;
+  border: none;
+  font-size: 1em;
+  padding: 1em;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+}
+
+.button:focus,
+.button:hover:not(:disabled),
+.button:active {
+  background-color: var(--fieryrose);
+}
+
+.button:active {
+  transform: scale(0.99);
+}

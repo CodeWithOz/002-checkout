@@ -1,2 +1,9 @@
 /* font */
 @import 'https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900';
+
+/* colors */
+:root {
+  --white: #fff;
+  --fieryrose: #ff4f79;
+  --peachorange: #ffb49a;
+}

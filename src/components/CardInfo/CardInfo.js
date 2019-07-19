@@ -84,7 +84,10 @@ export function CardInfo({
         <Field {...expiryMonth} />
         <Field {...expiryYear} />
         <Field {...ccCVC} />
-        <button disabled={pristine || submitting ? true : false}>
+        <button
+          className={styles.button}
+          disabled={pristine || submitting ? true : false}
+        >
           BOOK SECURELY
         </button>
         <p>
