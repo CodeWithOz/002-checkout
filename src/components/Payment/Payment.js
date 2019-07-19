@@ -7,9 +7,9 @@ import styles from './Payment.module.css';
 
 export const Payment = props => (
   <div className={styles.root}>
-    <Breakdown rootClassName={styles.padding} {...props} />
+    <Breakdown rootClassName={styles.margin} {...props} />
     <hr className={styles.hr} />
-    <CardInfo rootClassName={styles.padding} />
+    <CardInfo rootClassName={styles.margin} />
   </div>
 );
 
