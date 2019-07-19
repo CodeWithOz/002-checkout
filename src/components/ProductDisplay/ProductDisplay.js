@@ -13,7 +13,7 @@ const productDisplayConfig = {
   }
 };
 
-export function ProductDisplay({ bgImgUrl, price }) {
+export function ProductDisplay({ price }) {
   const {
     listingTitle,
     numPeople,
@@ -21,10 +21,7 @@ export function ProductDisplay({ bgImgUrl, price }) {
   } = productDisplayConfig;
 
   return (
-    <div
-      style={{ backgroundImage: `url(${bgImgUrl})` }}
-      className={styles.root}
-    >
+    <div className={styles.root}>
       <div>
         <h2 className={styles.heading}>{listingTitle}</h2>
         <p>

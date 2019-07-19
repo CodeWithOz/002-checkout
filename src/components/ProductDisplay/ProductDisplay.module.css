@@ -1,20 +1,27 @@
 /* font */
 @import 'https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900';
 
-:root {
-  --white: #fff;
+.root {
+  color: white;
+  padding: 1em;
 }
 
-.root {
-  display: flex;
-  align-items: flex-end;
-  color: var(--white);
-  padding: 1em;
+.root::before {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/jj-2.jpg')
+    center / cover no-repeat;
+  content: '';
+  height: 300px;
+  display: block;
+
+  /* background image should fill width of screen */
+  /* need to reverse the effect of the 1em padding applied to .root */
+  width: calc(100% + 2em);
+  margin: -1em;
 }
 
 .heading {
   font-size: 2.3em;
-  margin: 0;
+  margin: 0.5em 0;
   font-family: 'Playfair Display', serif;
 }
 

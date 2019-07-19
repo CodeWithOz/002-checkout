@@ -10,20 +10,6 @@ describe('App renders', () => {
   });
 });
 
-describe('App correctly passes', () => {
-  describe(`a 'bgImgUrl' prop to`, () => {
-    test('ProductDisplay', () => {
-      const { shallowWrapper } = setup(App, props);
-      expect(shallowWrapper.find(ProductDisplay).prop('bgImgUrl')).toEqual(
-        expect.any(String)
-      );
-      expect(
-        shallowWrapper.find(ProductDisplay).prop('bgImgUrl').length
-      ).toBeGreaterThan(0);
-    });
-  });
-});
-
 describe(`App's BgImgContainer contains`, () => {
   test('ProductDisplay', () => {
     const { shallowWrapper } = setup(App, props);
