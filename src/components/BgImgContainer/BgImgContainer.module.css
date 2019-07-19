@@ -1,4 +1,27 @@
-.BgImgContainer {
-  background-size: cover;
+.BgImgContainer::before {
+  content: '';
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  display: block;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/jj-2.jpg');
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  filter: blur(10px);
+}
+
+.BgImgContainer::after {
+  content: '';
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  display: block;
+  background-color: rgba(0, 0, 60, 0.65);
+  width: 100vw;
+  height: 100vh;
 }
