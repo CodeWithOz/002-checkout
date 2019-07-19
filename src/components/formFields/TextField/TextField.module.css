@@ -1,0 +1,24 @@
+.root {
+  margin: 1.5em 0;
+}
+
+.label {
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.input {
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 0.5em 0;
+  font-size: 1.3em;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  width: 100%;
+}
+
+.input:focus {
+  border-bottom-color: pink;
+  outline: none;
+  outline-offset: unset;
+}
