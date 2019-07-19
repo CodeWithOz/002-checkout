@@ -18,7 +18,7 @@ describe('SliderRange renders', () => {
     const { shallowWrapper } = setup(SliderRange, props);
     expect(shallowWrapper.find('label').length).toEqual(1);
     expect(shallowWrapper.find('label').prop('htmlFor')).toEqual(props.id);
-    expect(shallowWrapper.find('label').text()).toEqual(props.label);
+    expect(shallowWrapper.find('label').text()).toContain(props.label);
   });
 });
 
