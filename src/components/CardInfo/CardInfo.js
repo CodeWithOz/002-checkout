@@ -81,9 +81,11 @@ export function CardInfo({
       <form onSubmit={handleSubmit}>
         <Field {...ccName} />
         <Field {...ccNumber} />
-        <Field {...expiryMonth} />
-        <Field {...expiryYear} />
-        <Field {...ccCVC} />
+        <div className={styles.rowMaybe}>
+          <Field rootClassName={styles.flexItem} {...expiryMonth} />
+          <Field rootClassName={styles.flexItem} {...expiryYear} />
+          <Field rootClassName={styles.flexItem} {...ccCVC} />
+        </div>
         <button
           className={styles.button}
           disabled={pristine || submitting ? true : false}

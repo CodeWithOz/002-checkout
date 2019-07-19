@@ -1,4 +1,5 @@
 import React from 'react';
+import classnames from 'classnames';
 import { string, object, array } from 'prop-types';
 
 import styles from './SelectDropdown.module.css';
@@ -9,10 +10,11 @@ export default function SelectDropdown({
   placeholder,
   label,
   options,
+  rootClassName,
   ...restProps
 }) {
   return (
-    <div className={styles.root}>
+    <div className={classnames(rootClassName, styles.root)}>
       <div>
         <label htmlFor={restProps.id} className={styles.label}>
           {label}

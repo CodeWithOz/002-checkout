@@ -1,12 +1,19 @@
 import React from 'react';
+import classnames from 'classnames';
 import { string, object } from 'prop-types';
 import { ValidationError } from '../../../components';
 
 import styles from './TextField.module.css';
 
-export default function TextField({ label, meta, input, ...restProps }) {
+export default function TextField({
+  label,
+  meta,
+  input,
+  rootClassName,
+  ...restProps
+}) {
   return (
-    <div className={styles.root}>
+    <div className={classnames(rootClassName, styles.root)}>
       <div>
         <label className={styles.label} htmlFor={restProps.id}>
           {label}

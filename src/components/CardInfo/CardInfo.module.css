@@ -36,3 +36,14 @@
   text-align: center;
   font-weight: 300;
 }
+
+@media screen and (min-width: 576px) {
+  .rowMaybe {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .flexItem {
+    width: 32%;
+  }
+}
