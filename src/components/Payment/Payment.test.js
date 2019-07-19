@@ -32,4 +32,11 @@ describe('Payment correctly passes', () => {
     const { shallowWrapper } = setup(Payment, props);
     expect(shallowWrapper.find(Breakdown).prop('tax')).toEqual(props.tax);
   });
+
+  test(`a submit handler to CardInfo`, () => {
+    const { shallowWrapper } = setup(Payment, props);
+    expect(shallowWrapper.find(CardInfo).prop('onSubmit')).toEqual(
+      expect.any(Function)
+    );
+  });
 });
