@@ -1,6 +1,8 @@
 import React from 'react';
 import { string, object, array } from 'prop-types';
 
+import styles from './SelectDropdown.module.css';
+
 export default function SelectDropdown({
   input,
   meta,
@@ -10,16 +12,22 @@ export default function SelectDropdown({
   ...restProps
 }) {
   return (
-    <div>
-      <label htmlFor={restProps.id}>{label}</label>
-      <select {...input} {...restProps}>
-        <option value="">{placeholder}</option>
-        {options.map((value, idx) => (
-          <option value={value} key={idx}>
-            {value}
-          </option>
-        ))}
-      </select>
+    <div className={styles.root}>
+      <div>
+        <label htmlFor={restProps.id} className={styles.label}>
+          {label}
+        </label>
+      </div>
+      <div>
+        <select className={styles.select} {...input} {...restProps}>
+          <option value="">{placeholder}</option>
+          {options.map((value, idx) => (
+            <option className={styles.option} value={value} key={idx}>
+              {value}
+            </option>
+          ))}
+        </select>
+      </div>
     </div>
   );
 }
