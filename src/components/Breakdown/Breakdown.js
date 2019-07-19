@@ -1,5 +1,4 @@
 import React from 'react';
-import classnames from 'classnames';
 import { number, string } from 'prop-types';
 import { Slider } from '../../components';
 
@@ -50,7 +49,7 @@ const Breakdown = ({ days, price, discount, tax, rootClassName }) => {
   const { slider } = breakdownConfig;
 
   return (
-    <div className={classnames(rootClassName, styles.root)}>
+    <div className={rootClassName}>
       <Slider {...slider} />
       <ul className={styles.list}>
         {breakdownItems.map((itemProps, idx) => (
