@@ -2,6 +2,8 @@ import React from 'react';
 import { number } from 'prop-types';
 import { Slider } from '../../components';
 
+import styles from './Breakdown.module.css';
+
 const breakdownConfig = {
   slider: {
     initialValues: {
@@ -11,10 +13,10 @@ const breakdownConfig = {
   }
 };
 
-export const BreakdownItem = ({ label, value }) => (
-  <div>
-    <span>{label}</span>
-    <span>{value}</span>
+export const BreakdownItem = ({ label, value, labelClass, valueClass }) => (
+  <div className={styles.lineItem}>
+    <span className={labelClass}>{label}</span>
+    <span className={valueClass}>{value}</span>
   </div>
 );
 
@@ -49,14 +51,19 @@ const Breakdown = ({ days, price, discount, tax }) => {
   return (
     <div>
       <Slider {...slider} />
-      <ul>
+      <ul className={styles.list}>
         {breakdownItems.map((itemProps, idx) => (
-          <li key={idx}>
+          <li className={styles.subItem} key={idx}>
             <BreakdownItem {...itemProps} />
           </li>
         ))}
-        <li>
-          <BreakdownItem label={totalLabel} value={totalValue} />
+        <li className={styles.totalLine}>
+          <BreakdownItem
+            label={totalLabel}
+            value={totalValue}
+            labelClass={styles.totalLabel}
+            valueClass={styles.totalValue}
+          />
         </li>
       </ul>
     </div>
