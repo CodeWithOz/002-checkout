@@ -1,4 +1,13 @@
 .root {
   background-color: white;
+}
+
+.padding {
   padding: 1.5em;
+}
+
+.hr {
+  background-color: #ddd;
+  border: none;
+  height: 1px;
 }

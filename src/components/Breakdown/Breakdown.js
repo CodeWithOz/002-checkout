@@ -1,5 +1,5 @@
 import React from 'react';
-import { number } from 'prop-types';
+import { number, string } from 'prop-types';
 import { Slider } from '../../components';
 
 import styles from './Breakdown.module.css';
@@ -20,7 +20,7 @@ export const BreakdownItem = ({ label, value, labelClass, valueClass }) => (
   </div>
 );
 
-const Breakdown = ({ days, price, discount, tax }) => {
+const Breakdown = ({ days, price, discount, tax, rootClassName }) => {
   const breakdownItems = [];
   const daysLabel = `${price} GBP x ${days} days`;
   const daysPrice = price * days;
@@ -49,7 +49,7 @@ const Breakdown = ({ days, price, discount, tax }) => {
   const { slider } = breakdownConfig;
 
   return (
-    <div>
+    <div className={rootClassName}>
       <Slider {...slider} />
       <ul className={styles.list}>
         {breakdownItems.map((itemProps, idx) => (
@@ -71,6 +71,7 @@ const Breakdown = ({ days, price, discount, tax }) => {
 };
 
 Breakdown.propTypes = {
+  rootClassName: string,
   days: number,
   price: number,
   discount: number,
