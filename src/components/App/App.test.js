@@ -12,23 +12,13 @@ describe('App renders', () => {
 
 describe('App correctly passes', () => {
   describe(`a 'bgImgUrl' prop to`, () => {
-    test('BgImgContainer', () => {
-      const { shallowWrapper } = setup(App, props);
-      expect(shallowWrapper.find(BgImgContainer).prop('bgImgUrl')).toEqual(
-        expect.any(String)
-      );
-      expect(
-        shallowWrapper.find(BgImgContainer).prop('bgImgUrl').length
-      ).toBeGreaterThan(0);
-    });
-
     test('ProductDisplay', () => {
       const { shallowWrapper } = setup(App, props);
       expect(shallowWrapper.find(ProductDisplay).prop('bgImgUrl')).toEqual(
         expect.any(String)
       );
       expect(
-        shallowWrapper.find(BgImgContainer).prop('bgImgUrl').length
+        shallowWrapper.find(ProductDisplay).prop('bgImgUrl').length
       ).toBeGreaterThan(0);
     });
   });

@@ -10,7 +10,7 @@ export default function App() {
 
   return (
     <div>
-      <BgImgContainer bgImgUrl={bgImgUrl}>
+      <BgImgContainer>
         <ProductDisplay bgImgUrl={bgImgUrl} />
         <Payment />
       </BgImgContainer>
