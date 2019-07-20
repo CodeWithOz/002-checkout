@@ -30,7 +30,7 @@ const cardInfoConfig = {
     id: 'expiry-month',
     label: 'EXP. MONTH',
     component: SelectDropdown,
-    placeholder: 'Choose a month',
+    placeholder: 'Choose month',
     options: [
       'january',
       'february',
@@ -51,7 +51,7 @@ const cardInfoConfig = {
     id: 'expiry-year',
     label: 'EXP. YEAR',
     component: SelectDropdown,
-    placeholder: 'Choose a year',
+    placeholder: 'Choose year',
     options: ['2016', '2017', '2018', '2019', '2020', '2021']
   },
   ccCVC: {
