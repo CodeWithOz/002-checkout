@@ -1,9 +1,13 @@
 # Checkout Form
 
 This is a checkout form built with React, Redux, and redux-form, and styled using
-SASS. It is my recreation of challenge 002 of the
+CSS modules. It is my recreation of challenge 002 of the
 [React Daily UI challenge](https://github.com/fullstackreact/react-daily-ui) by
 Fullstack React.
+
+|               Mobile 1               |               Mobile 2               |           Desktop            |                  Original (Fullstack React)                   |
+| :----------------------------------: | :----------------------------------: | :--------------------------: | :-----------------------------------------------------------: |
+| ![Mobile 1](public/img/mobile-1.png) | ![Mobile 2](public/img/mobile-2.png) | Desktop view being completed | ![Original from Fullstack React](public/img/daily-ui-002.png) |
 
 ## Developer Setup
 
@@ -17,13 +21,13 @@ cd 002-checkout/
 Install dependencies and run the dev server:
 
 ```
-npm install
-npm start
+yarn install
+yarn start
 ```
 
 ### Testing
 
-Run `npm test`.
+Run `yarn test`.
 
 This project was bootstrapped with
 [Create React App](https://github.com/facebook/create-react-app) so
