@@ -93,11 +93,11 @@ describe('CardInfo renders', () => {
       );
     });
 
-    test(`'label' set to 'EXPIRY MONTH'`, () => {
+    test(`'label' set to 'EXP. MONTH'`, () => {
       const { shallowWrapper } = setup(CardInfo, props);
       expect(
         shallowWrapper.find({ name: 'expiry-month' }).prop('label')
-      ).toEqual('EXPIRY MONTH');
+      ).toEqual('EXP. MONTH');
     });
 
     test(`'component' set to SelectDropdown`, () => {
@@ -134,11 +134,11 @@ describe('CardInfo renders', () => {
       );
     });
 
-    test(`'label' set to 'EXPIRY YEAR'`, () => {
+    test(`'label' set to 'EXP. YEAR'`, () => {
       const { shallowWrapper } = setup(CardInfo, props);
       expect(
         shallowWrapper.find({ name: 'expiry-year' }).prop('label')
-      ).toEqual('EXPIRY YEAR');
+      ).toEqual('EXP. YEAR');
     });
 
     test(`'component' set to SelectDropdown`, () => {
