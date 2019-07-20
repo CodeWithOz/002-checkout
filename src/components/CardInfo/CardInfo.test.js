@@ -107,11 +107,11 @@ describe('CardInfo renders', () => {
       ).toEqual(SelectDropdown);
     });
 
-    test(`'placeholder' set to 'Choose a month'`, () => {
+    test(`'placeholder' set to 'Choose month'`, () => {
       const { shallowWrapper } = setup(CardInfo, props);
       expect(
         shallowWrapper.find({ name: 'expiry-month' }).prop('placeholder')
-      ).toEqual('Choose a month');
+      ).toEqual('Choose month');
     });
 
     test(`'options' set to a non-empty array`, () => {
@@ -148,11 +148,11 @@ describe('CardInfo renders', () => {
       ).toEqual(SelectDropdown);
     });
 
-    test(`'placeholder' set to 'Choose a year'`, () => {
+    test(`'placeholder' set to 'Choose year'`, () => {
       const { shallowWrapper } = setup(CardInfo, props);
       expect(
         shallowWrapper.find({ name: 'expiry-year' }).prop('placeholder')
-      ).toEqual('Choose a year');
+      ).toEqual('Choose year');
     });
 
     test(`'options' set to a non-empty array`, () => {
