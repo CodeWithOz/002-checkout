@@ -26,3 +26,17 @@
 .totalValue {
   font-size: 1.5em;
 }
+
+@media screen and (min-width: 768px) {
+  .subItem {
+    font-size: 0.7em;
+  }
+
+  .totalLabel {
+    font-size: 0.7em;
+  }
+
+  .totalValue {
+    font-size: 1.2em;
+  }
+}
