@@ -24,3 +24,14 @@
   outline: none;
   outline-offset: unset;
 }
+
+@media screen and (min-width: 768px) {
+  .label {
+    font-size: 0.7em;
+  }
+
+  .input {
+    font-size: 1.1em;
+    padding: 0.25em 0;
+  }
+}
