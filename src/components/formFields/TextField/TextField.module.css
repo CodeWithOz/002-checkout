@@ -11,7 +11,7 @@
 
 .input {
   border: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--yankeesblue);
   padding: 0.5em 0;
   font-size: 1.3em;
   font-family: 'Lato', sans-serif;
