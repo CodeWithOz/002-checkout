@@ -5,9 +5,9 @@ CSS modules. It is my recreation of challenge 002 of the
 [React Daily UI challenge](https://github.com/fullstackreact/react-daily-ui) by
 Fullstack React.
 
-|               Mobile 1               |               Mobile 2               |              Desktop               |                  Original (Fullstack React)                   |
-| :----------------------------------: | :----------------------------------: | :--------------------------------: | :-----------------------------------------------------------: |
-| ![Mobile 1](public/img/mobile-1.png) | ![Mobile 2](public/img/mobile-2.png) | ![Desktop](public/img/desktop.png) | ![Original from Fullstack React](public/img/daily-ui-002.png) |
+|               Mobile 1               |               Mobile 2               |              Desktop               |                       Original (Fullstack React)                       |
+| :----------------------------------: | :----------------------------------: | :--------------------------------: | :--------------------------------------------------------------------: |
+| ![Mobile 1](public/img/mobile-1.png) | ![Mobile 2](public/img/mobile-2.png) | ![Desktop](public/img/desktop.png) | ![Original from Fullstack React](public/img/original-daily-ui-002.png) |
 
 ## Developer Setup
 
