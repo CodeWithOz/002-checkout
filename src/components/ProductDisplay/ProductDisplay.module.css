@@ -69,4 +69,45 @@
     /* place it behind the text */
     z-index: -1;
   }
+
+  .root {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .root::after {
+    background-color: rgba(0, 0, 60, 0.3);
+    content: '';
+
+    /* these are repeated styles from the :before pseudoelement to produce the same effect */
+    /* stretch the image to fill the available height */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    /* reestablish the half-width */
+    width: 50%;
+    margin: 0 -1em;
+
+    /* place it behind the text */
+    z-index: -1;
+  }
+
+  .heading {
+    line-height: 1.1em;
+  }
+
+  .priceLine {
+    font-size: 0.8em;
+  }
+
+  .capacityLine {
+    margin: 0.25em 0;
+    font-size: 0.8em;
+  }
+
+  .datesLine {
+    margin: 0.25em 0;
+    font-size: 0.8em;
+  }
 }

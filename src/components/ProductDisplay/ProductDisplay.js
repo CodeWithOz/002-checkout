@@ -25,7 +25,7 @@ export function ProductDisplay({ price, rootClassName }) {
     <div className={classnames(rootClassName, styles.root)}>
       <div>
         <h2 className={styles.heading}>{listingTitle}</h2>
-        <p>
+        <p className={styles.priceLine}>
           <span className={styles.price}>{price} GBP </span>
           <span className={styles.priceUnit}>/ 1 day</span>
         </p>
