@@ -3,6 +3,7 @@
 .root {
   color: white;
   padding: 1em;
+  box-sizing: border-box;
 }
 
 .root::before {

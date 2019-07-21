@@ -1,4 +1,5 @@
 import React from 'react';
+import classnames from 'classnames';
 import { string, number } from 'prop-types';
 import { connect } from 'react-redux';
 
@@ -13,7 +14,7 @@ const productDisplayConfig = {
   }
 };
 
-export function ProductDisplay({ price }) {
+export function ProductDisplay({ price, rootClassName }) {
   const {
     listingTitle,
     numPeople,
@@ -21,7 +22,7 @@ export function ProductDisplay({ price }) {
   } = productDisplayConfig;
 
   return (
-    <div className={styles.root}>
+    <div className={classnames(rootClassName, styles.root)}>
       <div>
         <h2 className={styles.heading}>{listingTitle}</h2>
         <p>
@@ -41,6 +42,7 @@ export function ProductDisplay({ price }) {
 }
 
 ProductDisplay.propTypes = {
+  rootClassName: string,
   bgImgUrl: string,
   price: number
 };

@@ -8,9 +8,9 @@ export default function App() {
   return (
     <div className={styles.root}>
       <BgImgContainer>
-        <div className={styles.content}>
-          <ProductDisplay />
-          <Payment />
+        <div className={styles.container}>
+          <ProductDisplay rootClassName={styles.content} />
+          <Payment rootClassName={styles.content} />
         </div>
       </BgImgContainer>
     </div>

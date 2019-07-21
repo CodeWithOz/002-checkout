@@ -1,4 +1,4 @@
-.content {
+.container {
   display: flex;
   flex-direction: column;
 }
@@ -10,10 +10,13 @@
     padding: 1em 0;
   }
 
-  .content {
+  .container {
     width: 100%;
     max-width: 650px;
-    display: flex;
     flex-direction: row;
+  }
+
+  .content {
+    width: 50%;
   }
 }
