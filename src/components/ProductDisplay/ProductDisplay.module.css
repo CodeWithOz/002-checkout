@@ -50,3 +50,23 @@
 .date {
   font-weight: 900;
 }
+
+@media screen and (min-width: 768px) {
+  .root::before {
+    /* show the left side of the image */
+    background-position: left;
+
+    /* stretch the image to fill the available height */
+    height: unset;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    /* reestablish the half-width */
+    width: 50%;
+    margin: 0 -1em;
+
+    /* place it behind the text */
+    z-index: -1;
+  }
+}
