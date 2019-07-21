@@ -1,5 +1,8 @@
+@import '../../sharedStyles.css';
+
 .root {
-  background-color: white;
+  background-color: var(--white);
+  color: var(--yankeesblue);
 }
 
 .margin {
