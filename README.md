@@ -2,8 +2,9 @@
 
 Live demo available [here](http://002-checkout.s3-website-us-east-1.amazonaws.com).
 
-This is a checkout form built with React, Redux, and redux-form, and styled using
-CSS modules. It is my recreation of challenge 002 of the
+This is a product thumbnail and associated checkout form built with React,
+Redux, and redux-form, and styled using CSS modules. It is my recreation of
+challenge 002 of the
 [React Daily UI challenge](https://github.com/fullstackreact/react-daily-ui) by
 Fullstack React.
 
